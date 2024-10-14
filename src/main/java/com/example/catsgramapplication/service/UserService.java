@@ -36,10 +36,11 @@ public class UserService {
     }
 
     public User findUserByEmail(String email) {
-        for (User user : users.values())
-            if (user.getEmail().equals(email)) {
-                return user;
-            }
-        return null;
+        return users.get(email);
+//        for (User user : users.values())
+//            if (user.getEmail().equals(email)) {
+//                return user;
+//            }
+//        return null;
     }
 }
